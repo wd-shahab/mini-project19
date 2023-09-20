@@ -1,0 +1,157 @@
+@font-face {
+  font-family: PlusJS;
+  src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PlusJS";
+  min-height: 100vh;
+  background: var(--Very-light-grayish-blue);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  background: var(--White);
+  padding: .75rem .25rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+#badge {
+  background: var(--blue);
+  padding: 0 10px;
+  border-radius: 2px;
+  color: var(--White);
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--Dark-grayish-blue);
+  transition: all .3s;
+}
+
+a:hover{
+  color: var(--blue);
+}
+
+.blueBG {
+  background: var(--Light-grayish-blue-1);
+}
+
+.notif-box {
+  margin: .5rem 0;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  padding: .5rem;
+  font-size: 12px;
+}
+
+.notif-box h3,
+.new{
+  display: inline-block;
+}
+
+.notif-box h3{
+  font-size: 13px;
+  font-weight: 800;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.notif-box h3:hover{
+  color: var(--blue);
+}
+
+.notif-box a{
+  font-weight: 700;
+}
+
+img{
+  width: 40px;
+}
+
+.new{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 5px;
+  background: var(--red);
+}
+
+.date{
+  color: var(--Grayish-blue);
+  margin-top: .25rem;
+}
+
+.club{
+  color: var(--blue);
+  font-weight: 800 !important;
+}
+
+.message{
+  margin-top: .75rem;
+  padding: .5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.message:hover{
+  background: var(--Light-grayish-blue-2);
+}
+
+@media screen and (min-width: 500px) {
+  body{
+    display: grid;
+    place-items: center;
+  }
+  main{
+    width: clamp(500px, 50%, 700px);
+    padding: 1rem;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 7px;
+  }
+  .message{
+    padding: 1rem;
+    line-height: 1.25rem;
+  }
+}
